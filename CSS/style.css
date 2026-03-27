@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* top line */
+.top-line {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  border-radius: 100px;
+  z-index: 2000;
+  background: linear-gradient(to right, #ecad29, red);
+  width: 100%;
+  scale: 0 1;
+  animation: top-line linear;
+  animation-timeline: scroll();
+  transform-origin: left;
+}
+
+@keyframes top-line {
+  to {
+    scale: 1 1;
+  }
+}
+.container-fluid {
+    width: 100%;
+}
+/* top line */
+
+
+/* header */
+
+.collapse ul.navbar-nav li {
+    margin: 0 15px;
+}
+.collapse ul.navbar-nav li:hover {
+    border-bottom: 3px solid #ecad29;
+}
+.d-flex button {
+    border: 1px solid #ecad29;
+    padding: 5px;
+    border-radius: 10px;
+}
+.d-flex button:hover {
+    color: white;
+    background: #ecad29;
+}
+/* header */
+
+/* carousel */
+
+.carousel{
+    width: 100%;
+    height: 100vh;
+    /* margin-top: -50 px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item{
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s;
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(3){
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(4){
+    left: calc(67% + 200px);
+}
+
+.carousel .list .item:nth-child(5){
+    left: calc(67% + 400px);
+}
+
+.carousel .list .item:nth-child(6){
+    left: calc(67% + 600px);
+}
+
+.carousel .list .item:nth-child(n+7){
+    left: calc(67% + 800px);
+    opacity: 0;
+}
+
+
+
+
+
+.list .item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    width: 400px;
+    text-align: left;
+    color: #fff;
+    display: none;
+}
+
+.list .item:nth-child(2) .content{
+    display: block;
+}
+
+.content .title{
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #ecad29;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .name{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+.content .btn{
+    margin-left: 5px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+.content .btn button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.content .btn button:nth-child(1){
+    margin-right: 15px;
+}
+
+.content .btn button:nth-child(2){
+    background: transparent;
+    color: yellow;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover{
+    background-color: #ecad29;
+    color: #fff;
+    border-color: #ecad29;
+}
+
+
+@keyframes animate {
+    
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* Carousel */
+
+
+
+
+
+
+/* next prev arrows */
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ecad29;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/* time running */
+.carousel .timeRunning{
+    position: absolute;
+    z-index: 2000;
+    width: 0%;
+    height: 4px;
+    background-color: #ecad29;
+    left: 0;
+    top: 0px;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    
+    from{width: 0%;}
+    to{width: 100%;}
+
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 999px){
+    
+    /* header{
+        padding-left: 50px;
+    } */
+    .carousel {
+        height: 50vh;
+    }
+    .list .item .content{
+        left: 50px;
+    }
+
+    .content .title, .content .name{
+        font-size: 70px;
+    }
+
+    .content .des{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .list .item .content{
+        top: 40%;
+    }
+
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+
+    .content .btn #btn1{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/* Top recipes */
+.homeBelowHeroSec {
+    padding: 50px;
+    width: 100%;
+}
+.homeBelowHeroSec h1 {
+    text-align: center;
+}
+.cards{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+height:440px;
+background:#fff;
+border-radius:4px;
+box-shadow:0 20px 30px -10px rgba(0,0,0,0.1);
+max-width:300px;
+min-width:260px;
+overflow:hidden;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-direction:column;
+position:relative;
+transition:.4s;
+margin:0 10px;
+}
+
+/* CARD GRADIENT */
+
+.card:before{
+height:190px;
+width:calc(100% + 100px);
+content:"";
+position:absolute;
+background-image:linear-gradient(to top,#ecad29 0%,#ecad29 100%);
+border-radius:4px 4px 100% 100%;
+transition:.4s;
+top:0;
+}
+
+
+/* ARTICLE */
+
+.card article{
+z-index:1;
+display:flex;
+align-items:center;
+flex-direction:column;
+text-align:center;
+}
+
+.card article h2{
+color:#fff;
+margin:0;
+padding:40px 20px 10px;
+font-weight:500;
+font-size:24px;
+letter-spacing:.5px;
+}
+
+.card article .desc{
+padding:10px 30px;
+font-size:14px;
+line-height:24px;
+color:#666;
+height:90px;
+transition:.4s;
+}
+
+/* PROFILE IMAGE */
+
+.card article .pic{
+width:150px;
+height:150px;
+overflow:hidden;
+border-radius:50%;
+margin:20px 0;
+box-shadow:0 0 0 0 rgba(255,255,255,.3);
+transition:.6s;
+}
+
+.card article .pic img{
+width:100%;
+height: 100%;
+object-fit: cover;
+filter:grayscale(100%);
+}
+
+/* ACTION BUTTONS */
+
+.actions{
+width:100%;
+display:flex;
+justify-content:space-between;
+background:#fff;
+z-index:1;
+}
+
+
+
+/* CARD HOVER */
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 5px 10px -5px rgba(0,0,0,.3);
+}
+
+.card:hover:before{
+height:100%;
+border-radius:4px;
+}
+
+.card:hover .desc{
+color:#fff;
+}
+
+.card:hover .pic{
+box-shadow:0 0 0 8px rgba(255,255,255,.3);
+}
+
+.card:hover .pic img{
+filter:grayscale(0%);
+}
+
+/* End of top recipes */
+
+
+.mainContainer {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.imageContainer img {
+    border-radius: 20px;
+}
+.textContainer a {
+    text-decoration: none;
+    color: #000; 
+    font-size: 30px;  
+}
+
+
+/* below  */
+.section-title{
+    text-align: center;
+    margin: 30px;
+    font-size: 28px;
+}
+
+.carousel-container{
+    position: relative;
+}
+
+.carousel{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.cardForcara{
+    position: relative;
+    top: 80px;
+    min-width: 280px;
+    height: 380px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+} 
+
+.cardForcara video{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardForcara h3{
+    margin: 10px 0 5px;
+}
+
+.cardForcara p{
+    font-size: 14px;
+    color: gray;
+    padding: 0 10px 10px;
+}
+
+/* Buttons */
+.nav {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 3000;
+    top: 40%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 16x;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    left: 15px;
+}
+
+.right{
+    right: 15px;
+}
+
+
+
+
+
+/* footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+    height: 60vh;
+    width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+/* Columns */
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  color: #ffcc00; 
+  margin-bottom: 15px;
+}
+
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  padding-left: 5px; 
+}
+
+.footer-logo {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .imageContainer {
+        width: 90%;
+    }
+    .imageContainer img {
+        width: 100%;
+    }
+    .footer-container iframe {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+    }
+}
+
+
+
+

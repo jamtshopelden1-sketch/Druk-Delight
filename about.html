@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Druk Delights</title>
+    <!-- Fav icon -->
+     <link rel="icon" type="image/x-icon" href="img/group_4_logo.png">
+     <!-- Bootstraps -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     
+    <!-- css link -->
+    <link rel="stylesheet" href="CSS/about.css">
+
+    <style>
+
+:root {
+  --primary: rgb(184, 190, 192);
+  --secondary: rgb(237, 140, 54);
+}
+.meetOutTeam {
+  height: 100vh;
+}
+.d-flex button:hover {
+    background: #ecad29;
+    color: white;
+}
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.team-title {
+  font-size: 60px;
+  font-weight: 700;
+}
+.profiles {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.profile {
+  width: fit-content;
+  height: fit-content;
+  min-width: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-top: 20px;
+  margin: 20px;
+  max-height: 100px;
+  transition: 0.5s ease-in-out;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.details span {
+  font-weight: 300;
+}
+.team-card {
+  width: 320px;
+  height: 300px;
+  margin-bottom: 20px;
+  background: var(--primary);
+  box-sizing: border-box;
+  padding: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 6mm;
+  position: relative;
+}
+.head {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  margin-bottom: 5px;
+}
+.head img {
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 5mm;
+}
+.name {
+  font-size: 16px;
+  font-weight: 200;
+  width: fit-content;
+  margin-left: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0 8px;
+  border-radius: 3mm;
+}
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 15px;
+  position: relative;
+}
+.role {
+  font-weight: 200;
+  font-size: 14px;
+}
+.icons {
+  backdrop-filter: blur(9px) saturate(180%);
+  -webkit-backdrop-filter: blur(9px) saturate(180%);
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border-radius: 7mm;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.content::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 70%;
+  transform: translate(-50%, 0);
+  background: var(--secondary);
+  width: 60px;
+  height: 30px;
+  filter: blur(30px);
+}
+.icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.35s;
+}
+.icons a:hover {
+  background: white;
+  color: var(--primary);
+  border-radius: 50%;
+}
+.team-card::before {
+  position: absolute;
+  /* content: "location_pin"; */
+  font-family: "Material Icons";
+  color: var(--primary);
+  font-size: 85px;
+  top: calc(100% - 7px);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+.profile:hover {
+  max-height: 500px;
+}
+.profile:hover #profile-picture {
+  border: 5px solid var(--primary);
+}
+.profile:hover .team-card {
+  display: flex;
+  animation: fade 0.5s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1%,
+  50% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+.profile:nth-child(odd) {
+  --secondary: rgb(0, 0, 0);
+  --primary: rgb(255, 124, 10);
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <!-- header -->
+     <div class="top-line"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; z-index: 1000; width: 100%; box-shadow: 0 0 10px lightgray; padding-left: 80px; padding-right: 80px;">
+        <div class="container-fluid">
+             <img src="img/group_4_logo.png" alt="Logo" style="width: 80px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vlog
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="vlog.html">Vlog</a></li>
+                    <li><a class="dropdown-item" href="content.html">Action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="game.html">Games</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html" class="active">Contact Us</a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button type="submit" style="border-radius: 10px; border: 1px solid #ecad29;">Search</button>
+            </form>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+
+    <!-- hero section -->
+    <div class="aboutHeroSection" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-out">
+        <h1>ABOUT US</h1>
+        <BUtton>Contact us</BUtton>
+    </div>
+
+    <div class="visionMision" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
+        <div class="cardVisionMision">
+            <h2>Mission</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum saepe in ad voluptas asperiores, repellat autem voluptatum assumenda odio ipsum!</p>
+        </div>
+        <div class="cardVisionMision">
+            <h2>Vision</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum saepe in ad voluptas asperiores, repellat autem voluptatum assumenda odio ipsum!</p>
+        </div>
+    </div>
+
+
+
+    <!-- Meet our team section -->
+    <div class="meetOutTeam" data-aos="fade-down" data-aos-duration="1800" data-aos-easing="ease-in-out">
+        <div class="center">
+            <div class="team">
+            <div class="team-title">Meet Our Team</div>
+            <div class="profiles">
+                <!-- team 1 -->
+                <div class="profile">
+                <div class="team-card">
+                    <div class="head">
+                    <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" />
+                    <div class="name">Yebu Raj Ghalley</div>
+                    </div>
+                    <div class="content">
+                    <div class="role">Co founder</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                    accusamus fuga.
+                    </div>
+                    <div class="icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" id="picture" />
+                <div class="details">
+                    Yebu Raj Ghalley
+                    <span>Co Founder</span>
+                </div>
+                </div>
+
+                <!-- team 2 -->
+
+                <div class="profile">
+                <div class="team-card">
+                    <div class="head">
+                    <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" />
+                    <div class="name">Jambay Lhamo</div>
+                    </div>
+                    <div class="content">
+                    <div class="role">Co founder</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur, harum recusandae!
+                    </div>
+                    <div class="icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="pattern"></div>
+                </div>
+                <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" id="picture" />
+                <div class="details">
+                    Jambay Lhamo
+                    <span>Co founder</span>
+                </div>
+                </div>
+                <!-- team 3 -->
+                <div class="profile">
+                <div class="team-card">
+                    <div class="head">
+                    <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" />
+                    <div class="name">Sangay Tenzin</div>
+                    </div>
+                    <div class="content">
+                    <div class="role">Co founder</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                    magni distinctio quae.
+                    </div>
+                    <div class="icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="pattern"></div>
+                </div>
+                <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" id="profile-picture" />
+                <div class="details">
+                    Sangay Tenzin
+                    <span>Co founder</span>
+                </div>
+                </div>
+                <!-- team 4 -->
+                <div class="profile">
+                <div class="team-card">
+                    <div class="head">
+                    <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" />
+                    <div class="name">Pelden Singye Jamtsho</div>
+                    </div>
+                    <div class="content">
+                    <div class="role">Co founder</div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur, harum recusandae!
+                    </div>
+                    <div class="icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="pattern"></div>
+                </div>
+                <img src="https://i.pinimg.com/1200x/77/92/b7/7792b7fc018de082c9c25f7d1c02672d.jpg" alt="" id="picture" />
+                <div class="details">
+                    Pelden Singye Jamtsho
+                    <span>Co founder</span>
+                </div>
+                </div>
+                <!-- end -->
+            </div>
+            </div>
+        </div>
+    </div>
+        
+    <!--footer -->
+    <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-col">
+      <h3 class="footer-logo">Druk Delights</h3>
+      <p>Authentic Himalayan flavors delivered from our kitchen to your heart.</p>
+      <p class="copyright">© 2026 Bhutanese Flavors</p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Food-vlog</h4>
+      <ul>
+      <video></video>
+      </ul>
+    </div>  
+
+    <div class="footer-col">
+      <h4>MENU</h4>
+      <ul>
+        <li><a href="#">Ema Datshi</a></li>
+        <li><a href="#">Red Rice</a></li>
+        <li><a href="#">Phaksha Paa</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Connect Us</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3546.844193877005!2d91.51233037523693!3d27.25541547644456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375c0b58198471bf%3A0x476c279e0beaddf6!2z4L2h4L284L2T4LyL4L2V4L204L2C4LyL4L2j4LyL4L2T4L2E4LyL4L2g4L2B4L284L2R4LyL4L2C4L2T4L2Y4LyL4L2C4L6y4L204LyL4L2Q4L2E4LyL4LyNIFlvbnBodWxhIERvbWVzdGljIEFpcnBvcnQ!5e0!3m2!1sen!2sbt!4v1773482329534!5m2!1sen!2sbt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+</footer>
+
+<!-- Bootstraps -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

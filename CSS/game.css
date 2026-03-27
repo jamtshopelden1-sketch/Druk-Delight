@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* top line */
+.top-line {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  border-radius: 100px;
+  z-index: 2000;
+  background: linear-gradient(to right, #ecad29, red);
+  width: 100%;
+  scale: 0 1;
+  animation: top-line linear;
+  animation-timeline: scroll();
+  transform-origin: left;
+}
+
+@keyframes top-line {
+  to {
+    scale: 1 1;
+  }
+}
+.container-fluid {
+    width: 100%;
+}
+/* top line */
+
+
+/* header */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+}
+
+.menu button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* PROGRESS BAR */
+.progress-container {
+    width: 80%;
+    height: 8px;
+    background: #ddd;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 100%;
+    background: green;
+    transition: width 1s linear;
+}
+
+/* MATCH GAME */
+.items, .boxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.item {
+    background: orange;
+    color: white;
+    padding: 10px;
+    cursor: grab;
+}
+
+.box {
+    border: 2px dashed black;
+    padding: 20px;
+    width: 120px;
+    min-height: 60px;
+}
+
+/* FIXED ITEM STYLE */
+.box .item {
+    background: green;
+    cursor: default;
+}
+
+/* QUIZ */
+#options button {
+    display: block;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+/* MEMORY */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+    height: 60vh;
+    width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+/* Columns */
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  color: #ffcc00; 
+  margin-bottom: 15px;
+}
+
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  padding-left: 5px; 
+}
+
+.footer-logo {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  .footer-container iframe {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+    }
+}
