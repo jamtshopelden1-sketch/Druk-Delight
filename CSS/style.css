@@ -370,10 +370,13 @@ html {
         font-size: 14px;
     }
 } */
-@media screen and (max-width: 450px){
-    /* .navbar-toggler {
-        margin-left: 50px;
-    } */
+@media screen and (max-width: 455px){
+    .navbar {
+        padding: 3px 10px !important;
+    }
+    .container-fluid {
+        justify-content: space-between !important;
+    }
     .carousel {
         height: 600px;
      }

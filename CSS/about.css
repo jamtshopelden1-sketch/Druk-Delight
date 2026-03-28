@@ -218,6 +218,15 @@ html {
 }
 
 @media screen and (max-width: 450px){
+  .navbar {
+        padding: 3px 10px !important;
+  }
+  .container-fluid {
+        justify-content: space-between !important;
+  }
+  .aboutHeroSection {
+    height: 50vh;
+  }
   .visionMision {
     height: 50%;
     flex-direction: column;

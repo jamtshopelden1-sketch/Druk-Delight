@@ -229,7 +229,7 @@ html {
   padding: 10px 12px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1000px;
   transition: 0.3s;
 }
 
@@ -615,4 +615,81 @@ section p {
     height: 200px;
     margin: 0 auto;
   }
+}
+@media (max-width: 450px) {
+    .navbar {
+        padding: 3px 10px !important;
+    }
+    .container-fluid {
+        justify-content: space-between !important;
+    }
+    .hero {
+        height: 50vh;
+    }
+    .hero-content h1 {
+        font-size: 25px;
+    }
+    .hero-content p {
+        display: none;
+    }
+
+    .bodySection {
+        padding: 10px 20px;
+    }
+    .mainContainer {
+        height: 50vh;
+        flex-direction: column;
+        width: 100%;
+        gap: 1%;
+        padding: 5px;
+
+
+    }
+    /* .mainContainer .imageContainer, img {
+        display: none;
+    } */
+    .mainContainer .imageContainer {
+        width: 250px;
+        height: 300px;
+    } 
+    .mainContainer .imageContainer img {
+        width: 100%;
+        height: 100%;
+    }
+    .mainContainer .textContainer a {
+        font-size: 18px;
+    }
+
+    .mainContainer .textContainer {
+        width: 100%;
+    }
+
+    .videoContainer {
+        margin-top: 2px;
+    }
+
+    .videoPlayer {
+        width: 90%;
+        height: 50vh;
+    }
+    .footer-container {
+        font-size: 18px;
+    }
+    .footer-container div.footer-col {
+        height: 50px;
+    }
+    .footer-container div.footer-col p:nth-child(2) {
+        display: none;
+    }
+    .footer-container div.footer-col ul {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-container .map {
+        width: 400px;
+    }
+    .footer-container .map iframe {
+        width: 100%;
+        height: 200px;
+    }
 }

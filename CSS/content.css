@@ -265,4 +265,44 @@ section p {
     
 }
 
+@media (max-width: 450px) {
+    div.blog-text-container {
+        height: 60vh;
+    }
+    div.blog-text-container h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+    div.blog-text-container p {
+        display: none;
+    }
+    div.container div.sidebar {
+        display: none;
+    }
+    div.container {
+        padding: 20px;
+    }
+    .footer-container {
+        font-size: 18px;
+    }
+    .footer-container div.footer-col {
+        height: 50px;
+    }
+    .footer-container div.footer-col p:nth-child(2) {
+        display: none;
+    }
+    .footer-container div.footer-col ul {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-container .map {
+        width: 400px;
+    }
+    .footer-container .map iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
 

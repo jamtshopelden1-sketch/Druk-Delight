@@ -264,6 +264,12 @@ a.active {
 }
 
 @media screen and (max-width: 450px){
+    .navbar {
+        padding: 3px 10px !important;
+    }
+    .container-fluid {
+        justify-content: space-between !important;
+    }
     .footer-container {
         font-size: 18px;
     }
