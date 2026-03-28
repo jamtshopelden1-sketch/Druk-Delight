@@ -85,6 +85,7 @@ html {
   justify-content: center;
 }
 .aboutHeroSection h1 {
+  text-shadow: 0 0 10px black;
   color: white;
   font-size: 80px;
 }
@@ -172,13 +173,86 @@ html {
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+
+/* Tablet eg. Ipad pro */
+/* Tablet eg. Ipad pro */
+@media (min-width: 1366px) {
+    .navbar .container-fluid ul li a{
+        font-size: 14px;
+    }
+    .footer-container {
+        padding-top: 50px;
+    }
+    .footer {
+        height: auto;
+    }
+    div.footer-container {
+        height: 400px;
+    }
+    .footer-container iframe {
+        margin: 0 auto;
+        height: 300px;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 1024px){
+  .navbar .container-fluid ul li {
+        width: 100px;
+        margin: 0;
+    }
+    .navbar .container-fluid ul li a{
+        font-size: 15px;
+    }
+  .visionMision {
+    height: 300px;
+  }
+  .meetOutTeam {
+    height: 60vh;
+  }
+  .center{
+   height: 50vh;
+  }
   .footer-container iframe {
-    width: 80%;
-    height: 200px;
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 450px){
+  .visionMision {
+    height: 50%;
+    flex-direction: column;
+  }
+  .visionMision .cardVisionMision {
+    width: 100%;
+  }
+  .meetOutTeam .center {
+    
+  }
+  .meetOutTeam .team-title {
+    font-size: 20px;
+  }
+  .footer-container {
+        font-size: 18px;
+    }
+    .footer-container div.footer-col {
+        height: 50px;
+    }
+    .footer-container div.footer-col p:nth-child(2) {
+        display: none;
+    }
+    .footer-container div.footer-col ul {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-container .map {
+        width: 400px;
+    }
+    .footer-container iframe {
+        width: 100%;
+        height: 200px;
+    } 
+}
+
 
 
 

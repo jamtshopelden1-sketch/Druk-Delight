@@ -273,12 +273,51 @@ html {
 
 
 /* Responsive Design */
-
-@media screen and (max-width: 999px){
-    
-    /* header{
-        padding-left: 50px;
-    } */
+/* Tablet eg. Ipad pro */
+@media (min-width: 1366px) {
+    .navba r .container-fluid ul li a{
+        font-size: 14px;
+    }
+    #carousel {
+        height: 50vh;
+    }
+    .cardForcara {
+        top: 70px;
+    }
+    .footer-container {
+        padding-top: 50px;
+    }
+    .footer {
+        height: auto;
+    }
+    div.footer-container {
+        height: 400px;
+    }
+    .footer-container iframe {
+        margin: 0 auto;
+        height: 300px;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .navbar .container-fluid ul li {
+        width: 100px;
+        margin: 0;
+    }
+    .navbar .container-fluid ul li a{
+        font-size: 14px;
+    }
+    .collapse a {
+        font-size: 12px;
+    }
+    .cards {
+        flex-wrap: wrap; 
+        gap: 20px; 
+        width: 100px;
+    }
+    .card {
+        min-width:100px;
+    }
     .carousel {
         height: 50vh;
     }
@@ -293,10 +332,26 @@ html {
     .content .des{
         font-size: 16px;
     }
-
+    .mainContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .recipe-section {
+        height: 50vh;
+    }
+    .cardForcara {
+        top: 40px;
+    }
+    .carousel-container nav {
+        top: 50%;
+    }
+    .footer-container .map  {
+        margin: 0 auto;
+    }
 }
 
-@media screen and (max-width: 690px){
+/* @media screen and (max-width: 690px){
+
     header nav a{
         font-size: 14px;
         margin-right: 0;
@@ -313,6 +368,71 @@ html {
     .content .btn #btn1{
         padding: 10px 15px;
         font-size: 14px;
+    }
+} */
+@media screen and (max-width: 450px){
+    /* .navbar-toggler {
+        margin-left: 50px;
+    } */
+    .carousel {
+        height: 600px;
+     }
+    .item .content .title {
+        font-size: 30px;
+    }
+    .item .content .name {
+        font-size: 40px;
+    }
+    .item .content .btn button{
+        padding: 5px;
+    }
+    .item .content .des {
+        width: 250px;
+    }
+    .carousel .list .item {
+        width: 115px;
+        height: 180px;
+        border-radius: 10px;
+    }
+    .container-fluid {
+        padding: 0;
+        width: 100%;
+        justify-content: space-between ;
+    }
+    .imageContainer {
+        width: 90%;
+    }
+    .imageContainer img {
+        width: 100%;
+    }
+    .textContainer #textT{
+        font-size: 18px;
+    }
+    .textContainer p {
+        display: none;
+    }
+    .carousel-container .cardForcara {
+        height: 320px;
+    }
+    .footer-container {
+        font-size: 18px;
+    }
+    .footer-container div.footer-col {
+        height: 50px;
+    }
+    .footer-container div.footer-col p:nth-child(2) {
+        display: none;
+    }
+    .footer-container div.footer-col ul {
+        display: flex;
+        gap: 20px;
+    }
+    .footer-container .map {
+        width: 400px;
+    }
+    .footer-container .map iframe {
+        width: 100%;
+        height: 200px;
     }
 }
 
@@ -610,7 +730,7 @@ filter:grayscale(0%);
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .cards {
         flex-direction: column;
     }
@@ -636,7 +756,7 @@ filter:grayscale(0%);
         height: 200px;
         margin: 0 auto;
     }
-}
+} */
 
 
 

@@ -200,3 +200,37 @@ html {
         margin: 0 auto;
     }
 }
+
+
+/* Tablet eg. Ipad pro */
+@media (min-width: 1366px) {
+    .navbar .container-fluid ul li a{
+        font-size: 14px;
+    }
+    .footer-container {
+        padding-top: 50px;
+    }
+    .footer {
+        height: auto;
+    }
+    div.footer-container {
+        height: 400px;
+    }
+    .footer-container iframe {
+        margin: 0 auto;
+        height: 300px;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .navbar .container-fluid ul li {
+        width: 100px;
+        margin: 0;
+    }
+    .navbar .container-fluid ul li a{
+        font-size: 14px;
+    }
+    .footer-container iframe {
+        margin: 0 auto;
+    }
+}
