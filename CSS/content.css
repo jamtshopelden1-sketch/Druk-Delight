@@ -265,7 +265,13 @@ section p {
     
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
+    .navbar {
+        padding: 3px 10px !important;
+    }
+    .container-fluid {
+        justify-content: space-between !important;
+    }
     div.blog-text-container {
         height: 60vh;
     }

@@ -314,7 +314,7 @@ a.active {
         width: 500px;
     }
 }
-@media(max-width:1024px){
+@media(max-width: 1024px) and (min-width: 790px){
     .navbar .container-fluid ul li {
         width: 100px;
         margin: 0;
@@ -330,6 +330,7 @@ a.active {
         font-size: 24px;
     }
     .footer-container iframe {
+        height: 300px;
         margin: 0 auto;
     }
 }
