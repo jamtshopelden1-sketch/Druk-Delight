@@ -314,7 +314,7 @@ a.active {
         width: 500px;
     }
 }
-@media(max-width: 1024px) and (min-width: 790px){
+@media (min-width: 790px),(max-width: 1024px) {
     .navbar .container-fluid ul li {
         width: 100px;
         margin: 0;

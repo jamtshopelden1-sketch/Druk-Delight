@@ -242,7 +242,7 @@ section p {
     }
 }
 
-@media (max-width: 1024px) {
+@media  (min-width: 780px) , (max-width: 1024px) {
     .navbar .container-fluid ul li {
         width: 100px;
         margin: 0;
@@ -251,6 +251,7 @@ section p {
         font-size: 14px;
     }
     .footer-container iframe {
+        height: 100px;
         margin: 0 auto;
     }
 }
@@ -304,9 +305,9 @@ section p {
     .footer-container .map {
         width: 400px;
     }
-    .footer-container .map iframe {
+    .footer-container  iframe {
         width: 100%;
-        height: 200px;
+        height: 100px;
     }
 }
 
