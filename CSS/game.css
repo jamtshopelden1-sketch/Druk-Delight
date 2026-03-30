@@ -1,8 +1,8 @@
 :root {
-    --primary-orange: #ff9800;
-    --dark-orange: #e64a19;
-    --success-green: #4CAF50;
-    --bg-gradient: linear-gradient(135deg, #f6d365, #fda085);
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDB0cGFwZXFuaGQzc3EzYWNyYXZzY2d5MWdtcDhyaWgzZWw3OXRmcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OLDn9FDwXu3LhuMNGl/giphy.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
