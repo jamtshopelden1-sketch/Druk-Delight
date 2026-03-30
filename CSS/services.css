@@ -56,9 +56,6 @@ body{
     color: white;
     background: #ecad29;
 }
-a.active {
-    border-bottom: 3px solid #ecad29;
-}
 /* header */
 /*  HERO  */
 .services-hero {
