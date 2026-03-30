@@ -275,7 +275,7 @@ div.carousel{
 /* Responsive Design */
 /* Tablet eg. Ipad pro */
 @media (min-width: 1366px) {
-    .navba r .container-fluid ul li a{
+    .navbar .container-fluid ul li a{
         font-size: 14px;
     }
     #carousel {
