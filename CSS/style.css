@@ -35,6 +35,7 @@ html {
 }
 /* top line */
 
+
 /* header */
 
 .collapse ul.navbar-nav li {
@@ -56,9 +57,9 @@ html {
 
 /* carousel */
 
-.carousel{
+div.carousel{
     width: 100%;
-    height: 100vh !important;
+    height: 100vh;
     /* margin-top: -50 px; */
     overflow: hidden;
     position: relative;
@@ -79,8 +80,8 @@ html {
     transition: 1s;
 }
 
-div.carousel .list .item:nth-child(1),
-div.carousel .list .item:nth-child(2){
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2){
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -89,23 +90,23 @@ div.carousel .list .item:nth-child(2){
     height: 100%;
 }
 
-div.carousel .list .item:nth-child(3){
+.carousel .list .item:nth-child(3){
     left: 67%;
 }
 
-div.carousel .list .item:nth-child(4){
+.carousel .list .item:nth-child(4){
     left: calc(67% + 200px);
 }
 
-div.carousel .list .item:nth-child(5){
+.carousel .list .item:nth-child(5){
     left: calc(67% + 400px);
 }
 
-div.carousel .list .item:nth-child(6){
+.carousel .list .item:nth-child(6){
     left: calc(67% + 600px);
 }
 
-div.carousel .list .item:nth-child(n+7){
+.carousel .list .item:nth-child(n+7){
     left: calc(67% + 800px);
     opacity: 0;
 }
@@ -252,7 +253,7 @@ div.carousel .list .item:nth-child(n+7){
 
 
 /* time running */
-div.carousel .timeRunning{
+.carousel .timeRunning{
     position: absolute;
     z-index: 2000;
     width: 0%;
@@ -317,7 +318,7 @@ div.carousel .timeRunning{
     .card {
         min-width:100px;
     }
-    div.carousel {
+    .carousel {
         height: 50vh;
     }
     .list .item .content{
@@ -348,58 +349,30 @@ div.carousel .timeRunning{
         margin: 0 auto;
     }
     .footer-container .map iframe {
-        height: 200px;
+        height: 300px;
     }
 }
 
+/* @media screen and (max-width: 690px){
 
-@media (min-width: 600px),(max-width:750px) {
-     .navbar {
-        padding: 3px 10px !important;
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
     }
-    .container-fluid {
-        justify-content: space-between !important;
-    }
-    .carousel {
-        height: 600px !important;
-    }
-    .recipe-section .carousel-container div#carousel {
-        top: 0;
-        height: 200px !important;
-    }
-    .recipe-section .carousel-container div#carousel .cardForcara h3,p{
-        display: none;
-    }
-    button.nav {
-        top: 120px;
-    }
-    footer {
-        margin-top: 20px;
-    }
-    .footer-container {
-        font-size: 18px;
-    }
-    .footer-container div.footer-col {
-        height: 50px;
-    }
-    .footer-container div.footer-col p:nth-child(2) {
-        display: none;
-    }
-    .footer-container div.footer-col ul {
-        /* display: flex;
-        gap: 20px; */
-    }
-    .footer-container .map {
-        position: relative;
-        top: 20px;
-        width: 400px;
-    }
-    .footer-container .map iframe {
-        width: 100%;
-        height: 100px;
-    }
-}
 
+    .list .item .content{
+        top: 40%;
+    }
+
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+
+    .content .btn #btn1{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+} */
 @media (max-width: 480px) {
     .navbar {
         padding: 3px 10px !important;

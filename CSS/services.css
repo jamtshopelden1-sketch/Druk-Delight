@@ -56,6 +56,9 @@ body{
     color: white;
     background: #ecad29;
 }
+a.active {
+    border-bottom: 3px solid #ecad29;
+}
 /* header */
 /*  HERO  */
 .services-hero {
@@ -238,7 +241,7 @@ body{
 /*  RESPONSIVE  */
 @media(max-width:768px){
     .services-hero {
-        height: 75vh !important;
+        height: 50vh;
     }
 
     .hero-content h1{
@@ -260,7 +263,7 @@ body{
   }
 }
 
-@media (min-width: 300px), (max-width: 480px){
+@media screen and (max-width: 450px){
     .navbar {
         padding: 3px 10px !important;
     }
@@ -285,7 +288,7 @@ body{
     }
     .footer-container  iframe {
         width: 100%;
-        height: 100px !important;
+        height: 100px;
     }
 }
 
