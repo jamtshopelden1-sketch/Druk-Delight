@@ -17,7 +17,7 @@
 <body>
     <!-- header -->
      <div class="top-line"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; z-index: 1000; width: 100%; box-shadow: 0 0 10px lightgray; padding-left: 80px; padding-right: 80px; font-size: 18px;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; z-index: 1000; width: 100%; box-shadow: 0 0 10px lightgray; padding-left: 80px; padding-right: 80px;">
         <div class="container-fluid">
              <img src="img/group_4_logo.png" alt="Logo" style="width: 80px;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -170,7 +170,7 @@
 
         <div class="cards">
 
-        <div class="card" >
+        <div class="card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
             <article>
             <h2>Paksha</h2>
             <div class="pic"><img src="img/Phaksha.jpg"></div>
@@ -216,6 +216,7 @@
             <div class="pic"><img src="img/sikam.jpg"></div>
 
             <div class="desc">Adrian has collected flies since they were six years old and now has many dozen flies but none in their pants.</div>
+
             </article>
             <div class="actions">
             
@@ -240,8 +241,8 @@
     <section class="recipe-section">
         <!-- <h2 class="section-title">Watch Bhutanese Recipes</h2> -->
         <div class="carousel-container">
-            <button class="nav left" onclick="slideLeft()" data-aos="fade-left">❮</button>
-            <div class="carousel" id="carousel" data-aos="fade-left">
+            <button class="nav left" onclick="slideLeft()">❮</button>
+            <div class="carousel" id="carousel">
 
                 <!-- CARD 1 -->
                 <div class="cardForcara">
@@ -333,7 +334,7 @@
 
 
             </div>
-            <button class="nav right" onclick="slideRight()" data-aos="fade-left">❯</button>
+            <button class="nav right" onclick="slideRight()">❯</button>
         </div>
     </section>
 
@@ -386,8 +387,6 @@
     <!-- End of vid container -->
     <!-- Bootstraps -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-
 
      <!-- js link -->
     <script src="JS/app.js"></script>

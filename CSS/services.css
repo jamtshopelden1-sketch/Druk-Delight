@@ -236,7 +236,7 @@ body{
 }
 
 /*  RESPONSIVE  */
-/* @media (min-width:768px){
+@media(max-width:768px){
     .services-hero {
         height: 75vh !important;
     }
@@ -258,7 +258,7 @@ body{
     height: 200px;
     margin: 0 auto;
   }
-} */
+}
 
 @media (min-width: 300px), (max-width: 480px){
     .navbar {
@@ -311,13 +311,16 @@ body{
         width: 500px;
     }
 }
-@media (max-width: 1024px) {
+@media (min-width: 790px),(max-width: 1024px) {
     .navbar .container-fluid ul li {
         width: 100px;
         margin: 0;
     }
     .navbar .container-fluid ul li a{
         font-size: 14px;
+    }
+    .services-hero {
+        height: 50vh;
     }
 
     .feature-text h3 {
