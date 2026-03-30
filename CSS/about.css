@@ -36,7 +36,11 @@ html {
 
 
 /* header */
-
+div.navbar {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  font-size: 18px !important;
+}
 .collapse ul.navbar-nav li {
     margin: 0 15px;
 }
@@ -54,22 +58,6 @@ html {
 }
 /* header */
 
-.collapse ul.navbar-nav li {
-    margin: 0 15px;
-}
-.collapse ul.navbar-nav li:hover {
-    border-bottom: 3px solid #ecad29;
-}
-.d-flex button {
-    border: 1px solid #ecad29;
-    padding: 5px;
-    border-radius: 10px;
-}
-.d-flex button:hover {
-    color: white;
-    background: #ecad29;
-}
-/* header */
 .aboutHeroSection {
   height: 75vh;
   background-image: url('https://i.pinimg.com/1200x/4d/96/55/4d96556c05e16ea4f989e6e0508e1168.jpg');
@@ -192,14 +180,14 @@ html {
         width: 500px;
     }
 }
-@media (min-width: 750px) , (max-width: 1024px) {
+@media (max-width: 1024px) {
   .navbar .container-fluid ul li {
         width: 100px;
         margin: 0;
     }
-    .navbar .container-fluid ul li a{
-        font-size: 15px;
-    }
+  .navbar .container-fluid ul li a{
+        font-size: 14px;
+  }
   .visionMision {
     height: 300px;
   }
@@ -214,52 +202,6 @@ html {
     margin: 0 auto;
   }
 }
-
-@media (min-width: 600px),(max-width:750px) {
-     .navbar {
-        padding: 3px 10px !important;
-    }
-    .container-fluid {
-        justify-content: space-between !important;
-    }
-    .visionMision {
-      margin-bottom: 200px;
-    }
-    .meetOutTeam div.team-title{
-      font-size: 20px;
-    }
-    .profiles {
-      height: 500px;
-    }
-    div.profile .name,.role{
-      font-size: 18px !important;
-    }
-    footer {
-        margin-top: 450px;
-    }
-    .footer-container {
-        font-size: 18px;
-    }
-    .footer-container div.footer-col {
-        height: 50px;
-    }
-    .footer-container div.footer-col p:nth-child(2) {
-        display: none;
-    }
-    .footer-container div.footer-col ul {
-        /* display: flex;
-        gap: 20px; */
-    }
-    .footer-container .map {
-        position: relative;
-        top: 20px;
-        width: 400px;
-    }
-    .footer-container iframe {
-        width: 100%;
-        height: 100px;
-    }
-  }
 
 
 @media (max-width: 480px) {

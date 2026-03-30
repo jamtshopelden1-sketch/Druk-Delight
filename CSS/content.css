@@ -239,7 +239,7 @@ section p {
     }
 }
 
-@media  (min-width: 780px) , (max-width: 1024px) {
+@media (max-width: 1024px) {
     .navbar .container-fluid ul li {
         width: 100px;
         margin: 0;
